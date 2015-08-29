@@ -1,4 +1,5 @@
 require("./main.css");
+var _ = require('underscore');
 var React = require('react');
 
 var Box = React.createClass({
@@ -9,7 +10,7 @@ var Box = React.createClass({
   },
 
   render: function() {
-    var names = this.state.names.map(function(name, index) {
+    var names = _.map(this.state.names, function(name, index) {
       if (name !== '') {
         var image = 'http://media.haoduoshipin.com/modern/avatar/' + name + '.jpg';
         return (
