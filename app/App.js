@@ -22,7 +22,7 @@ var App = React.createClass({
     });
 
     return (
-      <div className="main">
+      <div className="boxes-area clearfix">
         {boxes}
       </div>
     );

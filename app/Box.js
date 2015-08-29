@@ -14,18 +14,18 @@ var Box = React.createClass({
       if (name !== '') {
         var image = 'http://media.haoduoshipin.com/modern/avatar/' + name + '.jpg';
         return (
-            <li className="profile" key={index}>
+            <li className="avatar" key={index}>
               <img src={image} />
             </li>
           );
       } else {
-        return (<li className="profile" key={index}></li>);
+        return (<li className="avatar" key={index}></li>);
       }
     });
 
     return (
-      <div className="profiles-wrapper">
-        <ul className="clearfix">
+      <div className="box-wrapper">
+        <ul className="box clearfix">
           {names}
         </ul>
       </div>
