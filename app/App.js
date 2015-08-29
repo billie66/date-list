@@ -1,35 +1,32 @@
+var _ = require('underscore');
 var React = require('react');
-require("./main.css");
+var Box = require('./Box.js')
 
-var Box = React.createClass({
+
+var App = React.createClass({
   getInitialState: function() {
     return {
-      names: ['billie66', 'peter', '', '']
+      groups: {
+        one: ['peter','','',''],
+        two: ['','','peter',''],
+        three: ['','peter','',''],
+        four: ['peter','','',''],
+        five: ['','','','peter']
+      }
     };
   },
 
   render: function() {
-    var names = this.state.names.map(function(name, index) {
-      if (name !== '') {
-        var image = 'http://media.haoduoshipin.com/modern/avatar/' + name + '.jpg';
-        return (
-            <li className="profile" key={index}>
-              <img src={image} />
-            </li>
-          );
-      } else {
-        return (<li className="profile" key={index}></li>);
-      }
+    var boxes = _.map(this.state.groups, function(g, key){
+      return <Box group={g} key={key} />
     });
 
     return (
-      <div className="profiles-wrapper">
-        <ul className="clearfix">
-          {names}
-        </ul>
+      <div className="main">
+        {boxes}
       </div>
     );
   }
 });
 
-React.render(<Box />, document.getElementById('app'));
+React.render(<App />, document.getElementById('app'));
