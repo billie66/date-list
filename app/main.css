@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: deeppink;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+#app {
+  margin: 0 auto;
+}
+
+.profiles-wrapper {
+  background-color: #fff;
+  margin: 0 auto;
+  border: 2px solid blue;
+}
+
+.profile {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: #eee;
+  float: left;
+  margin: .5em;
+}
+
+.profile img {
+  display: block;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
