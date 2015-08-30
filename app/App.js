@@ -1,11 +1,11 @@
-var _ = require('underscore');
-var React = require('react');
-var Box = require('./Box.js')
+import _ from 'underscore';
+import React from 'react';
+import Box from './Box.js';
 
-
-var App = React.createClass({
-  getInitialState: function() {
-    return {
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state = {
       groups: {
         one: ['peter','','',''],
         two: ['','','peter',''],
@@ -14,10 +14,9 @@ var App = React.createClass({
         five: ['','','','peter']
       }
     };
-  },
-
-  render: function() {
-    var boxes = _.map(this.state.groups, function(g, key){
+  }
+  render(){
+    var boxes = _.map(this.state.groups, (g, key) => {
       return <Box group={g} key={key} />
     });
 
@@ -27,6 +26,6 @@ var App = React.createClass({
       </div>
     );
   }
-});
+};
 
 React.render(<App />, document.getElementById('app'));

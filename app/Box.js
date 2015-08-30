@@ -1,22 +1,23 @@
-require("./main.css");
-var _ = require('underscore');
-var React = require('react');
+import './main.css';
+import _ from 'underscore';
+import React from 'react';
 
-var Box = React.createClass({
-  getInitialState: function() {
-    return {
-      names: this.props.group
+class Box extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      names: props.group
     };
-  },
+  }
 
-  render: function() {
-    var names = _.map(this.state.names, function(name, index) {
+  render() {
+    var names = _.map(this.state.names, (name, index) => {
       if (name !== '') {
-        var image = 'http://media.haoduoshipin.com/modern/avatar/' + name + '.jpg';
+        var image = `http://media.haoduoshipin.com/modern/avatar/${name}.jpg`;
         return (
-            <li className="avatar" key={index}>
-              <img src={image} />
-            </li>
+          <li className="avatar" key={index}>
+            <img src={image} />
+          </li>
           );
       } else {
         return (<li className="avatar" key={index}></li>);
@@ -31,6 +32,6 @@ var Box = React.createClass({
       </div>
     );
   }
-});
+};
 
-module.exports = Box;
+export default Box;
