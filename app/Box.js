@@ -17,10 +17,16 @@ class Box extends React.Component{
         return (
           <li className="avatar" key={index}>
             <img src={image} />
+            <div className="name">billie66</div>
           </li>
-          );
+        );
       } else {
-        return (<li className="avatar" key={index}></li>);
+        var image = 'http://media.haoduoshipin.com/modern/avatar/default.jpg'
+        return (
+          <li className="avatar" key={index}>
+          <img src={image} />
+          </li>
+        );
       }
     });
 

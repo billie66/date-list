@@ -7,11 +7,11 @@ class App extends React.Component{
     super();
     this.state = {
       groups: {
-        one: ['peter','','',''],
-        two: ['','','peter',''],
-        three: ['','peter','',''],
-        four: ['peter','','',''],
-        five: ['','','','peter']
+        one: ['peter','','','','',''],
+        two: ['peter','','peter','','',''],
+        three: ['billie66','peter','','','',''],
+        four: ['peter','','','','',''],
+        five: ['','','','peter','','']
       }
     };
   }
