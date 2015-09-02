@@ -1,3 +1,4 @@
+import './main.css';
 import _ from 'underscore';
 import React from 'react';
 import Box from './Box.js';
@@ -7,17 +8,17 @@ class App extends React.Component{
     super();
     this.state = {
       groups: {
-        one: ['peter','','','','',''],
-        two: ['peter','','peter','','',''],
-        three: ['billie66','peter','','','',''],
-        four: ['peter','','','','',''],
-        five: ['','','','peter','','']
+        one: {names: ['peter','','','','',''], number: '001', date: '九月三号星期三晚上 8：00-9：00'},
+        two: {names: ['peter','','','','',''], number: '002', date: ''},
+        three: {names: ['peter','','','','',''], number: '', date: ''},
+        four: {names: ['peter','','','','',''], number: '', date: ''},
+        five: {names: ['peter','','','','',''], number: '', date: ''}
       }
     };
   }
   render(){
     var boxes = _.map(this.state.groups, (g, key) => {
-      return <Box group={g} key={key} />
+      return <Box group={g.names} key={key} date={g.date} number={g.number} />
     });
 
     return (

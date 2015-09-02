@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ececec;
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 ul {
@@ -26,19 +26,28 @@ ul {
 #app {
   width: 100%;
   margin: 50px auto;
-  background-color: #ececec;
 }
 
 .box-wrapper {
-  width: 100%;
-  background-color: #ececec;
+  width: 319px;
   margin: 0 auto;
+  margin-bottom: 3em;
+  text-align: center;
+  font-size: 1em;
+  opacity: .97;
 }
+@media (min-width: 800px) {
+  .box-wrapper {
+    width: 626px;
+  }
+}
+.box-wrapper .number {
+  color: deeppink;
+  font-size: 3em;
+}
+
 .box {
-  width: 626px;
   margin: 1em auto;
-  border: 1px solid yellow;
-  background-color: #fff;
 }
 
 .avatar {
@@ -61,8 +70,4 @@ ul {
   font-size: 12px;
 }
 
-@media (min-width: 800px) {
-  .box-wrapper {
-  }
-}
 
