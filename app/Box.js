@@ -16,10 +16,10 @@ class Box extends React.Component{
       var url = '';
       var mark = '';
       if (name !== '') {
-        url = `http://media.haoduoshipin.com/modern/avatar/${name}.jpg`;
+        url = `http://media.haoduoshipin.com/modern/team/${name}.jpg`;
         mark = name;
       } else {
-        url = 'http://media.haoduoshipin.com/modern/avatar/default.jpg';
+        url = 'http://media.haoduoshipin.com/modern/team/default.jpg';
         mark = 'null';
       }
       return (
