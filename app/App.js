@@ -7,13 +7,7 @@ class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      groups: {
-        one: {names: ['peter','alex','bryan','fulei','hikaru','jiangfan'], number: '001', date: '九月三号星期三晚上 8:00-9:00'},
-        two: {names: ['peter','jinxin','kathy','kimmg','koi','peter'], number: '002', date: 'sihsdfjk sdfksd fdsf'},
-        three: {names: ['peter','ronghai','ryan','seaborn','seanjsong','shajun'], number: '', date: ''},
-        four: {names: ['peter','shooter','taylor','wuqi','xiaoping','yartoo'], number: '', date: ''},
-        five: {names: ['peter','yingchang','zhenhappy','','',''], number: '', date: ''}
-      }
+      groups: window.groups
     };
   }
   render(){
